@@ -5,7 +5,7 @@ ENV LANG C.UTF-8
 RUN apk add xorg-server xf86-video-fbdev xf86-input-evdev xf86-input-libinput eudev dbus chromium
 COPY xorg.conf.d /etc/X11/xorg.conf.d
 RUN echo "#!/bin/bash" > /etc/X11/xinit/xserverrc \
-  && echo 'exec /usr/bin/X -s 0 dpms -nolisten tcp "$@"' >> /etc/X11/xinit/xserverrc
+  && echo 'exec /usr/bin/X -s 0 dpms -nocursor -nolisten tcp "$@"' >> /etc/X11/xinit/xserverrc
 RUN ln -s /var/lib/dbus/machine-id /etc/machine-id
 
 COPY run.sh /usr/local/bin/chromium-kiosk
