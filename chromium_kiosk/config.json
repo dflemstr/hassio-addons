@@ -20,5 +20,6 @@
   "hassio_api": true,
   "hassio_role": "default",
   "options": {"url": "https://google.com"},
-  "schema": {"url": "url"}
+  "schema": {"url": "url"},
+  "image": "dflemstr/hassio-{arch}-chromium-kiosk"
 }
