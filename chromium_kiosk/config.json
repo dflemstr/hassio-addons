@@ -1,6 +1,6 @@
 {
   "name": "Chromium Kiosk",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "slug": "chromium_kiosk",
   "description": "Launches chromium in kiosk mode locally on the hass.io host",
   "arch": ["armv7", "amd64"],

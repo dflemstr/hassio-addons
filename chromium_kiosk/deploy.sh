@@ -1,4 +1,6 @@
-docker run --rm --privileged -v \
-    ~/.docker:/root/.docker homeassistant/amd64-builder \
-    --all -t chromium_kiosk -r https://github.com/dflemstr/hassio-addons
-
+docker run --rm --privileged \
+  -v ~/.docker:/root/.docker \
+  -v $PWD:/data \
+  homeassistant/amd64-builder \
+  --all \
+  -t /data
