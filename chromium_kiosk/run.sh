@@ -7,9 +7,6 @@ adduser chromium tty
 config_path=/data/options.json
 url="$(jq --raw-output '.url' "$config_path")"
 
-Xorg -configure
-cat /root/xorg.conf.new
-
 echo "/usr/bin/chromium-browser --kiosk '$url' --disable-gpu --disable-software-rasterizer --disable-dev-shm-usage" >> /home/chromium/.xinitrc
 /usr/bin/dbus-daemon --system
 su -c startx chromium
