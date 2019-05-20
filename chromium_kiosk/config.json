@@ -1,9 +1,9 @@
 {
   "name": "Chromium Kiosk",
-  "version": "dev",
+  "version": "0.1.0",
   "slug": "chromium_kiosk",
   "description": "Launches chromium in kiosk mode locally on the hass.io host",
-  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "arch": ["armv7", "amd64"],
   "devices": [
     "/dev/tty:/dev/tty:rwm",
     "/dev/tty0:/dev/tty0:rwm",
