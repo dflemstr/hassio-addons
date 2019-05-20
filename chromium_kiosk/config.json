@@ -1,0 +1,24 @@
+{
+  "name": "Chromium Kiosk",
+  "version": "dev",
+  "slug": "chromium_kiosk",
+  "description": "Launches chromium in kiosk mode locally on the hass.io host",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "devices": [
+    "/dev/tty:/dev/tty:rwm",
+    "/dev/tty0:/dev/tty0:rwm",
+    "/dev/tty1:/dev/tty1:rwm",
+    "/dev/tty2:/dev/tty2:rwm",
+    "/dev/tty3:/dev/tty3:rwm",
+    "/dev/console:/dev/console:rwm",
+    "/dev/fb0:/dev/fb0:rwm",
+    "/dev/input/event0:/dev/input/event0:rwm"
+  ],
+  "auto_uart": true,
+  "startup": "application",
+  "boot": "auto",
+  "hassio_api": true,
+  "hassio_role": "default",
+  "options": {"url": "https://google.com"},
+  "schema": {"url": "url"}
+}
