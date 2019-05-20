@@ -1,6 +1,6 @@
 {
   "name": "Chromium Kiosk",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "slug": "chromium_kiosk",
   "description": "Launches chromium in kiosk mode locally on the hass.io host",
   "arch": ["armv7", "amd64"],
@@ -12,7 +12,9 @@
     "/dev/tty3:/dev/tty3:rwm",
     "/dev/console:/dev/console:rwm",
     "/dev/fb0:/dev/fb0:rwm",
-    "/dev/input/event0:/dev/input/event0:rwm"
+    "/dev/input/event0:/dev/input/event0:rwm",
+    "/dev/input/mice:/dev/input/mice:rwm",
+    "/dev/input/mouse0:/dev/input/mouse0:rwm"
   ],
   "auto_uart": true,
   "startup": "application",
